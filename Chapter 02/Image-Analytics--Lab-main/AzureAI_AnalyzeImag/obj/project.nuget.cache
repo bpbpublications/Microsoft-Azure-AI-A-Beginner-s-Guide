@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "M6Vsdz2wUoH+JVxjN/pRqcYjT7Vp6HS6OhKBT5Z2BiIDjbUqn3q9TTqRjODqJlZ8KF8pJ1brzZ/TF9WCIzqNLw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\MOHAMMED ZAYAN\\source\\repos\\AzureVisionBook\\AzureAI_AnalyzeImag\\AzureAI_AnalyzeImag\\AzureAI_AnalyzeImag.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MOHAMMED ZAYAN\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\MOHAMMED ZAYAN\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512"
+  ],
+  "logs": []
+}

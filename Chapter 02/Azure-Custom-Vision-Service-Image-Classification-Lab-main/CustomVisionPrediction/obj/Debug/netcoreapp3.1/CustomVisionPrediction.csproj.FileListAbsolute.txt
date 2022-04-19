@@ -1,0 +1,13 @@
+C:\Users\MOHAMMED ZAYAN\source\repos\CustomVisionPrediction\CustomVisionPrediction\bin\Debug\netcoreapp3.1\CustomVisionPrediction.exe
+C:\Users\MOHAMMED ZAYAN\source\repos\CustomVisionPrediction\CustomVisionPrediction\bin\Debug\netcoreapp3.1\CustomVisionPrediction.deps.json
+C:\Users\MOHAMMED ZAYAN\source\repos\CustomVisionPrediction\CustomVisionPrediction\bin\Debug\netcoreapp3.1\CustomVisionPrediction.runtimeconfig.json
+C:\Users\MOHAMMED ZAYAN\source\repos\CustomVisionPrediction\CustomVisionPrediction\bin\Debug\netcoreapp3.1\CustomVisionPrediction.runtimeconfig.dev.json
+C:\Users\MOHAMMED ZAYAN\source\repos\CustomVisionPrediction\CustomVisionPrediction\bin\Debug\netcoreapp3.1\CustomVisionPrediction.dll
+C:\Users\MOHAMMED ZAYAN\source\repos\CustomVisionPrediction\CustomVisionPrediction\bin\Debug\netcoreapp3.1\CustomVisionPrediction.pdb
+C:\Users\MOHAMMED ZAYAN\source\repos\CustomVisionPrediction\CustomVisionPrediction\obj\Debug\netcoreapp3.1\CustomVisionPrediction.csprojAssemblyReference.cache
+C:\Users\MOHAMMED ZAYAN\source\repos\CustomVisionPrediction\CustomVisionPrediction\obj\Debug\netcoreapp3.1\CustomVisionPrediction.AssemblyInfoInputs.cache
+C:\Users\MOHAMMED ZAYAN\source\repos\CustomVisionPrediction\CustomVisionPrediction\obj\Debug\netcoreapp3.1\CustomVisionPrediction.AssemblyInfo.cs
+C:\Users\MOHAMMED ZAYAN\source\repos\CustomVisionPrediction\CustomVisionPrediction\obj\Debug\netcoreapp3.1\CustomVisionPrediction.csproj.CoreCompileInputs.cache
+C:\Users\MOHAMMED ZAYAN\source\repos\CustomVisionPrediction\CustomVisionPrediction\obj\Debug\netcoreapp3.1\CustomVisionPrediction.dll
+C:\Users\MOHAMMED ZAYAN\source\repos\CustomVisionPrediction\CustomVisionPrediction\obj\Debug\netcoreapp3.1\CustomVisionPrediction.pdb
+C:\Users\MOHAMMED ZAYAN\source\repos\CustomVisionPrediction\CustomVisionPrediction\obj\Debug\netcoreapp3.1\CustomVisionPrediction.genruntimeconfig.cache

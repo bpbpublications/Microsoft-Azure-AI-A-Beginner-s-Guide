@@ -1,0 +1,773 @@
+
+> LUIS application information
+> !# @app.name = LUIS-ReservationApp
+> !# @app.versionId = 0.1
+> !# @app.culture = en-us
+> !# @app.luis_schema_version = 7.0.0
+> !# @app.tokenizerVersion = 1.0.0
+
+
+> # Intent definitions
+
+# None
+
+
+> !# @intent.inherits = name : RestaurantReservation.ChangeReservation; domain_name : RestaurantReservation; model_name : ChangeReservation
+
+# RestaurantReservation.ChangeReservation
+- {@RestaurantReservation.Time=8:00} 's reservation at {@RestaurantReservation.PlaceName=laurelwood pub and brewery} needs to be for {@RestaurantReservation.NumberPeople=six} people instead of {@RestaurantReservation.NumberPeople=ten}
+- {@RestaurantReservation.Time=8pm} rather than {@RestaurantReservation.Time=8:15pm} at {@RestaurantReservation.PlaceName=chez bruce}
+- 9pm's reservation will change the people from {@RestaurantReservation.NumberPeople=8} to {@RestaurantReservation.NumberPeople=9}
+- add to {@RestaurantReservation.NumberPeople=six} people for reservation at {@RestaurantReservation.PlaceName=per se}
+- adjust {@RestaurantReservation.Time=tomorrow}'s reservation at {@RestaurantReservation.Time=7pm} to include {@RestaurantReservation.NumberPeople=2} people instead of {@RestaurantReservation.NumberPeople=7}
+- advance the reservation from {@RestaurantReservation.Time=8pm} to {@RestaurantReservation.Time=6pm}
+- amend reservation at {@RestaurantReservation.PlaceName=marc forgione} to include {@RestaurantReservation.NumberPeople=5} people for my meal {@RestaurantReservation.Time=6:00 p.m.} at {@RestaurantReservation.Time=7:00 p.m.}
+- amend that {@RestaurantReservation.NumberPeople=three} person reservation at {@RestaurantReservation.PlaceName=aquagrill} from {@RestaurantReservation.Time=7:00} to {@RestaurantReservation.Time=7:30 pm}
+- are you able to change the reservation at {@RestaurantReservation.PlaceName=st. francis winery & vineyards} to {@RestaurantReservation.NumberPeople=five} people
+- ask somenone to order another reservation at {@RestaurantReservation.Time=ten to six} {@RestaurantReservation.Time=tomorrow}
+- call {@RestaurantReservation.PlaceName=cathy's restaurant} to update the people to {@RestaurantReservation.NumberPeople=5}
+- call of it,change the time from {@RestaurantReservation.Time=eight thirty} to {@RestaurantReservation.Time=a quarter past nine}
+- can i change my reservation at {@RestaurantReservation.PlaceName=fairwood} {@RestaurantReservation.Time=tomorrow}
+- can i change my reservation {@RestaurantReservation.Time=tonight} at {@RestaurantReservation.PlaceName=fairwood} to {@RestaurantReservation.NumberPeople=6} people instead of {@RestaurantReservation.NumberPeople=five}
+- can you ask lee to help me postpone the {@RestaurantReservation.Time=a quarter to seven} 's reservation
+- cancel and change it to {@RestaurantReservation.Time=half past six}, the same place
+- cancel and make another reservation at same place {@RestaurantReservation.Time=tomorrow}
+- cancel {@RestaurantReservation.PlaceName=dicos} reservation make it to {@RestaurantReservation.PlaceName=kfc}
+- cancel it, make it for {@RestaurantReservation.NumberPeople=four} guests at {@RestaurantReservation.PlaceName=zucca}
+- cancel {@RestaurantReservation.PlaceName=kfc} and make for {@RestaurantReservation.PlaceName=seafood&fruit restaurant&bar reservationat} the same time
+- cancel {@RestaurantReservation.PlaceName=kfc} reservation make it to {@RestaurantReservation.PlaceName=dicos}
+- cancel {@RestaurantReservation.PlaceName=starbucks} make it {@RestaurantReservation.PlaceName=3w cafe}
+- cancel {@RestaurantReservation.PlaceName=zucca}, make for {@RestaurantReservation.Cuisine=sushi} restaurant same time, {@RestaurantReservation.NumberPeople=4} guests
+- cancel {@RestaurantReservation.PlaceName=zucca}, make it {@RestaurantReservation.PlaceName=the red lobster}
+- change {@RestaurantReservation.PlaceName=3w cafe} reservation to {@RestaurantReservation.NumberPeople=5} people
+- change {@RestaurantReservation.Time=7:30 pm} 's reservation for {@RestaurantReservation.PlaceName=wong kei} from {@RestaurantReservation.NumberPeople=four} people to {@RestaurantReservation.NumberPeople=eight}
+- change {@RestaurantReservation.PlaceName=dirt candy} reservation to {@RestaurantReservation.Time=8pm} instead of {@RestaurantReservation.Time=7pm}
+- change in dining reservation to {@RestaurantReservation.PlaceName=le gavroche} for brunch
+- change {@RestaurantReservation.PlaceName=kfc} reservation to {@RestaurantReservation.Time=3pm}
+- change my {@RestaurantReservation.NumberPeople=2} person table at {@RestaurantReservation.Time=seven} {@RestaurantReservation.Time=tonight} to {@RestaurantReservation.PlaceName=bar cotto}
+- change my {@RestaurantReservation.Time=7pm} {@RestaurantReservation.PlaceName=veraci pizza} reservation to {@RestaurantReservation.Time=8pm}
+- change my reservation {@RestaurantReservation.Time=tonight} from {@RestaurantReservation.NumberPeople=4} people to {@RestaurantReservation.NumberPeople=three} people?
+- change place to {@RestaurantReservation.PlaceName=market restaurant and bar} now
+- change reservation {@RestaurantReservation.Time=9:00} at {@RestaurantReservation.Cuisine=tokyo} reataurant a table for {@RestaurantReservation.NumberPeople=5}
+- change reservation at {@RestaurantReservation.PlaceName=zucca} a table for {@RestaurantReservation.NumberPeople=5} to {@RestaurantReservation.Time=five twenty}
+- change reservation to {@RestaurantReservation.PlaceName=bloom's restaurant} {@RestaurantReservation.Time=fourteen past five}
+- change restaurant to {@RestaurantReservation.PlaceName=the peak lookout}
+- change restaurants on the {@RestaurantReservation.PlaceName=salumeria rosi parmacotto} reservation to {@RestaurantReservation.PlaceName=sane lam moon}
+- change supper to {@RestaurantReservation.NumberPeople=4} people at {@RestaurantReservation.PlaceName=le vallauris}
+- change table at {@RestaurantReservation.PlaceName=peter luger steak house} tonight to {@RestaurantReservation.NumberPeople=4} people on one table
+- change that {@RestaurantReservation.NumberPeople=5} person reservation from {@RestaurantReservation.PlaceName=yo! sushi} to {@RestaurantReservation.PlaceName=the woodsman tavern}
+- change that reservation to {@RestaurantReservation.PlaceName=the chicago pizza pie factory} to {@RestaurantReservation.NumberPeople=4} people
+- change the {@RestaurantReservation.PlaceName=chef's table at brooklyn fare} reservation from {@RestaurantReservation.Time=7pm} to {@RestaurantReservation.Time=8pm} {@RestaurantReservation.Time=next thursday}
+- change the location to {@RestaurantReservation.PlaceName=true food kitchen} for my {@RestaurantReservation.Time={@RestaurantReservation.NumberPeople=twenty} past three} reservation
+- change the lunch reservation for {@RestaurantReservation.NumberPeople=four} people to {@RestaurantReservation.NumberPeople=five} people
+- change the lunch reservation to {@RestaurantReservation.NumberPeople=nine} people instead of {@RestaurantReservation.NumberPeople=two}
+- change the number of people to {@RestaurantReservation.NumberPeople=4} for the reservation at {@RestaurantReservation.PlaceName=dirt candy}
+- change the one table reservation for {@RestaurantReservation.Time=tonight}'s dinner to {@RestaurantReservation.NumberPeople=five} people at {@RestaurantReservation.PlaceName=king's carriage house}
+- change the place to another restaurant called {@RestaurantReservation.PlaceName=blue hill}
+- change the reservation at {@RestaurantReservation.Time=6} instead of {@RestaurantReservation.Time=5}
+- change the reservation at {@RestaurantReservation.PlaceName=gourmet burger kitchen} from {@RestaurantReservation.NumberPeople=7} people to {@RestaurantReservation.NumberPeople=eight} people
+- change the supper time at {@RestaurantReservation.PlaceName=grodzinski bakery}
+- change the time of the reservation at {@RestaurantReservation.PlaceName=second avenue deli} tonight to {@RestaurantReservation.Time=7:00} from {@RestaurantReservation.Time=6:25}
+- change the {@RestaurantReservation.Time=twenty-five to nine} dinner reservation to {@RestaurantReservation.PlaceName=lindy's}
+- change this breakfast for {@RestaurantReservation.NumberPeople=4} to {@RestaurantReservation.Time=8pm} {@RestaurantReservation.Time=1 hour later}
+- change this reservation for dinner {@RestaurantReservation.Time=the day after tomorrow}
+- change time of dinner {@RestaurantReservation.PlaceName=peter luger steak house} {@RestaurantReservation.Time=a quarter past six}
+- change to {@RestaurantReservation.NumberPeople=5} person table at {@RestaurantReservation.Time=noon} {@RestaurantReservation.Time=today} at {@RestaurantReservation.PlaceName=lartusi}
+- change to table of {@RestaurantReservation.Time=6} {@RestaurantReservation.Time=tonight} {@RestaurantReservation.Time=half past five} at {@RestaurantReservation.PlaceName=bitterroot}
+- change {@RestaurantReservation.Time=tonight} 's brunch reservation to {@RestaurantReservation.PlaceName=la trompette}
+- contact {@RestaurantReservation.PlaceName=kennedy fried chicken} and increase the number of my party to {@RestaurantReservation.NumberPeople=seven}
+- contact {@RestaurantReservation.PlaceName=stoneburner} and let them know i need the space for {@RestaurantReservation.NumberPeople=6} people instead of {@RestaurantReservation.NumberPeople=5}
+- could you put off the reservation at {@RestaurantReservation.Time=quarter past five}
+- delay reservation at {@RestaurantReservation.PlaceName=jahn's} to {@RestaurantReservation.Time=7 o'clock}
+- delay the reservation at {@RestaurantReservation.Time=6pm} to {@RestaurantReservation.Time=7pm}
+- dinner at {@RestaurantReservation.PlaceName=café boulud} postpone til {@RestaurantReservation.Time=8}
+- do i have time to change the reservation for {@RestaurantReservation.NumberPeople=4} people to {@RestaurantReservation.NumberPeople=three} people
+- eat at {@RestaurantReservation.PlaceName=veniero's} instead of {@RestaurantReservation.PlaceName=serendipity 3} on {@RestaurantReservation.Time=friday} for my {@RestaurantReservation.NumberPeople=eight} person reservation.
+- edit my dinner reservation to {@RestaurantReservation.NumberPeople=2} people on {@RestaurantReservation.Time=chirstmas eve} at {@RestaurantReservation.PlaceName=tribeca grill}
+- edit reservation for {@RestaurantReservation.PlaceName=chez billy sud} to {@RestaurantReservation.NumberPeople=three} people
+- {@RestaurantReservation.Time=eight o'clock} rather than {@RestaurantReservation.Time=7} for {@RestaurantReservation.PlaceName=cranks} lunch
+- get all my reservation pulled up and change the time for my {@RestaurantReservation.NumberPeople=7} person party at {@RestaurantReservation.PlaceName=yung kee}.
+- go to my dinner reservation and change the locale to {@RestaurantReservation.PlaceName=fairwood}
+- help me postpone the {@RestaurantReservation.Time=5pm}'s reservation
+- how can i change the nice restaurant on the {@RestaurantReservation.NumberPeople=seven} people reservation to {@RestaurantReservation.PlaceName=the woodsman tavern} restaurant
+- how can i postpone that {@RestaurantReservation.Time=7 pm} reservation to {@RestaurantReservation.Time=8 pm}
+- how to change the {@RestaurantReservation.PlaceName=shiro’s} reservation to {@RestaurantReservation.PlaceName=zuma}
+- i have some changes make to my {@RestaurantReservation.Time=11:20} {@RestaurantReservation.PlaceName=peter luger steak house} reservation.
+- i have to delay the reservation of {@RestaurantReservation.PlaceName=dicos} in {@RestaurantReservation.Address=300 112th ave se}
+- i need {@RestaurantReservation.Time=7 o'clock} 's reservation to be changed to {@RestaurantReservation.PlaceName=charles' southern style kitchen}
+- i need the {@RestaurantReservation.Rating=4-star} restaurant changed to {@RestaurantReservation.PlaceName=yauatcha} instead of {@RestaurantReservation.PlaceName=chef's table at brooklyn fare} for that reservation
+- i need the place changed to {@RestaurantReservation.PlaceName=louisxv reataurant} now
+- i need the time of the {@RestaurantReservation.PlaceName=mak's noodle} reservation changed to {@RestaurantReservation.Time=7:30}
+- i need to delay the reservation time about one hour
+- i need you make the reservation start from {@RestaurantReservation.Time=5pm} instead of {@RestaurantReservation.Time=6pm}.
+- i need you to change the reservation time from {@RestaurantReservation.Time=17:00} to {@RestaurantReservation.Time=18:00}
+- i really need you to postpone the reservation i made to {@RestaurantReservation.Time=eight o'clock} for dinner
+- i think we need to add one seat on the reservation at {@RestaurantReservation.Time=6 o'clock}
+- i want to change the number of people into {@RestaurantReservation.NumberPeople=5}
+- i will now have a dining party of {@RestaurantReservation.NumberPeople=ten} people so make the changes to my {@RestaurantReservation.PlaceName=gabriel kreuther} reservation.
+- i would like {@RestaurantReservation.Time=6:30} 's reservation to be at {@RestaurantReservation.PlaceName=marc forgione} now instead of {@RestaurantReservation.PlaceName=jack’s place}
+- i'd like to make my reservation for {@RestaurantReservation.Time=tonight} for {@RestaurantReservation.PlaceName=sardi's} instead of {@RestaurantReservation.PlaceName=rolfe's chop house} change it for me?
+- if you can change my reservation for {@RestaurantReservation.NumberPeople=four} at {@RestaurantReservation.PlaceName=the peak lookout} {@RestaurantReservation.Time=tonight} to {@RestaurantReservation.PlaceName=ray's candy store} instead?
+- increase the number of people on my {@RestaurantReservation.PlaceName=salumeria rosi parmacotto} reservation to {@RestaurantReservation.NumberPeople=four}
+- is it possible to contact {@RestaurantReservation.PlaceName=h&h bagels} for a possible reservation modification for lunch
+- keep the same day on my {@RestaurantReservation.PlaceName=gourmet burger kitchen} reservation but postpone it.
+- let {@RestaurantReservation.PlaceName=zucca} knows that change my reservation from {@RestaurantReservation.Time=3:15} to {@RestaurantReservation.Time=3:30 p.m.} on {@RestaurantReservation.Time=thursday}
+- lunch will be {@RestaurantReservation.NumberPeople=5} guests not {@RestaurantReservation.NumberPeople=3} change this
+- make dinner at {@RestaurantReservation.PlaceName=zucca} for {@RestaurantReservation.NumberPeople=8}, not {@RestaurantReservation.NumberPeople=7} people
+- make lunch reservation time {@RestaurantReservation.Time=8pm} not {@RestaurantReservation.Time=7pm}
+- make my lunch reservation advanced to {@RestaurantReservation.Time=half past eleven}
+- make the lunch for {@RestaurantReservation.Time=13 o'clock} not {@RestaurantReservation.Time=14:30}
+- make the reservation at {@RestaurantReservation.PlaceName=victorian restaurant} for {@RestaurantReservation.NumberPeople=5} instead of {@RestaurantReservation.NumberPeople=7}
+- make the reservation for time {@RestaurantReservation.Time=3 pm} not {@RestaurantReservation.Time=2 pm}
+- make the reservation later, {@RestaurantReservation.Time=8:30}
+- make the reservation starts at {@RestaurantReservation.Time=6:00} instead of {@RestaurantReservation.Time=7:15}
+- make the reservation {@RestaurantReservation.Time=tonight} for {@RestaurantReservation.PlaceName=dirt candy} instead of {@RestaurantReservation.PlaceName=chi spacca}
+- {@RestaurantReservation.NumberPeople=nine} to dine at {@RestaurantReservation.PlaceName=rolfe's chop house} not {@RestaurantReservation.PlaceName=wong kei} {@RestaurantReservation.Time=7pm}
+- note change to {@RestaurantReservation.PlaceName=aberdeen angus steak houses} for lunch not {@RestaurantReservation.PlaceName=the peak lookout}
+- now we will be going to {@RestaurantReservation.PlaceName=sofra} note change in place
+- postone till {@RestaurantReservation.Time=8} breakfast at {@RestaurantReservation.PlaceName=ruth's chris steak house}
+- postpone {@RestaurantReservation.PlaceName=le gavroche} reservation to {@RestaurantReservation.Time=9 o'clock} for {@RestaurantReservation.Time=tonight}
+- postpone that reservation for {@RestaurantReservation.NumberPeople=5} people to {@RestaurantReservation.Time=7 o'clock}
+- postpone the {@RestaurantReservation.Rating=3-star} restaurant {@RestaurantReservation.PlaceName=zucca} reservation by one hour to {@RestaurantReservation.Time=twelve thirty}
+- postpone the {@RestaurantReservation.PlaceName=jungsik's} to {@RestaurantReservation.Time=8}
+- postpone the {@RestaurantReservation.PlaceName=maison novelli} reservation to {@RestaurantReservation.Time=half past seven}
+- postpone the reservation about {@RestaurantReservation.Time=one hour}.
+- postpone {@RestaurantReservation.Time=today} 's reservation to {@RestaurantReservation.Time=7:00}
+- push back the {@RestaurantReservation.PlaceName=dorrian's red hand restaurant} reservation to {@RestaurantReservation.Time=six} for {@RestaurantReservation.Time=tonight}
+- put off my dinner reservation at the restaurant on {@RestaurantReservation.Address=zhongshan road}
+- put off the reservation in {@RestaurantReservation.PlaceName=starbucks} on {@RestaurantReservation.Address=the first avenue}
+- redo the {@RestaurantReservation.PlaceName=charleston} reservation for {@RestaurantReservation.Time=tonight} so there are {@RestaurantReservation.NumberPeople=five} people
+- reschedule my reservation for {@RestaurantReservation.Time=tomorrow} at {@RestaurantReservation.PlaceName=joy ranch bbq}
+- switch my {@RestaurantReservation.Time=tonight} 's reservation to {@RestaurantReservation.PlaceName=kyiv restaurant} from {@RestaurantReservation.PlaceName=luk yu}
+- the reservation will change to the restaurant on {@RestaurantReservation.Address=9600 bellaire blvd}
+- update the dinner's people to {@RestaurantReservation.NumberPeople=6}
+- update to {@RestaurantReservation.Time=5 o'clock}
+- we are changing the place to dine to {@RestaurantReservation.PlaceName=l'entrecôte}
+- we need to call {@RestaurantReservation.PlaceName=barclay prime} to see if they can push back my reservation {@RestaurantReservation.Time=one hour}
+- we need to get ahold of {@RestaurantReservation.PlaceName=kfc} to switch that reservation time
+- we need to get ahold of {@RestaurantReservation.PlaceName=weiya restaurant} to switch that reservation time
+- we need to go later like {@RestaurantReservation.Time=a quarter to seven} change time
+- we now have {@RestaurantReservation.NumberPeople=seven} more people to add to dinner at {@RestaurantReservation.PlaceName=the halal guys}
+- we want dining in {@RestaurantReservation.PlaceName=kfc} not {@RestaurantReservation.PlaceName=dicos}
+- would you change the {@RestaurantReservation.PlaceName=metropolitan museum of art roof garden} reservation to {@RestaurantReservation.Time=8:00} {@RestaurantReservation.Time=tonight}
+- would you change the reservation for {@RestaurantReservation.Time=tomorrow} to {@RestaurantReservation.PlaceName=patsy's}
+- reschedule [(my|the)] reservation [for {@RestaurantReservation.Time}] [at {RestaurantReservation.PlaceName}]
+- cancel {@RestaurantReservation.PlaceName}[,] make [it] [for] {RestaurantReservation.PlaceName}
+
+
+> !# @intent.inherits = name : RestaurantReservation.Confirm; domain_name : RestaurantReservation; model_name : Confirm
+
+# RestaurantReservation.Confirm
+- book it
+- book the reservation
+- book this reservation
+- confirm my {@RestaurantReservation.Time=7 o'clock} reservation for {@RestaurantReservation.Time=next wednesday}
+- confirm my table for {@RestaurantReservation.NumberPeople=3} tonight at {@RestaurantReservation.Time=6:30}
+- confirm the reservation at {@RestaurantReservation.PlaceName=sushi bar} in wuxi
+- confirm the reservation with {@RestaurantReservation.PlaceName=happy bar}
+- confirm {@RestaurantReservation.Time=today} {@RestaurantReservation.Time=5pm} reservation at {@RestaurantReservation.PlaceName=dayu hot pot}
+- confirming the reservation
+- definitely
+- do me a favor and ink that reservation for {@RestaurantReservation.Time=4} at {@RestaurantReservation.PlaceName=the nosh bar}
+- finalize the reservation for {@RestaurantReservation.Time=tonight} for {@RestaurantReservation.NumberPeople=ten} people at {@RestaurantReservation.PlaceName=harold black}
+- get that {@RestaurantReservation.PlaceName=sane lam moon} reservation on the books.
+- go ahead and complete the reservation for {@RestaurantReservation.Time=tonight} at {@RestaurantReservation.Time=7} for {@RestaurantReservation.NumberPeople=two} people at {@RestaurantReservation.PlaceName=grodzinski bakery}
+- go ahead and confirm the booking of my table for {@RestaurantReservation.NumberPeople=ten} tonight at {@RestaurantReservation.PlaceName=st. john}
+- go ahead and make the reservation for {@RestaurantReservation.Time=9 o'clock} at {@RestaurantReservation.PlaceName=54 below} as completed please.
+- go ahead with the reservation for {@RestaurantReservation.NumberPeople=three} {@RestaurantReservation.Time=tomorrow} at {@RestaurantReservation.Cuisine=sushi} restaurant
+- great go ahead and reserve
+- i am sure i need to go
+- i definitely want to book the {@RestaurantReservation.Cuisine=chinese} restaurant
+- i do want to reserve the inexpensive restaurant
+- i for sure want to eat at {@RestaurantReservation.PlaceName=true food kitchen} on {@RestaurantReservation.Address=78th street} so go ahead and confirm.
+- i will go to the {@RestaurantReservation.PlaceName=shanghai restaurant} {@RestaurantReservation.Time=this afternoon} to confirm the reservation
+- i'd like you to go ahead and make this reservation for {@RestaurantReservation.PlaceName=rich table} on {@RestaurantReservation.Address=richard road} {@RestaurantReservation.Time=tonight} yes.
+- let's confirm my {@RestaurantReservation.NumberPeople=eight} person reservation for {@RestaurantReservation.PlaceName=the halal guys}
+- make sure my lunch reservation for {@RestaurantReservation.PlaceName=stars bbq} is booked
+- make the reservation
+- of course yes reserve it
+- of couse you can reserve it
+- ok sound great, reserve it
+- ok, i need to book it
+- ok, just reserve this restaurant for dinner
+- place reservation
+- proceed with the reservation
+- reservation accepted
+- reserve
+- reserve this dinner sure
+- reserve this, yes
+- sure you can do it
+- sure, i need to book it
+- that's fine ,do it
+- the reservation for {@RestaurantReservation.Time=tonight} at {@RestaurantReservation.PlaceName=the woodsman tavern} at {@RestaurantReservation.Address=no.300 112th ave se} needs to completed, yes.
+- the table for tonight at {@RestaurantReservation.PlaceName=amber} needs to be confirmed.
+- this is correct reserve the restaurant
+- this reservation will work
+- yes book it
+- yes book the reservation
+- yes for the reservation
+- yes get the reservation
+- yes go ahead with the reservation
+- yes i want the table
+- yes make the reservation now
+- yes reserve the charming restaurant
+- yes, i would like for you to make this reservation for me for {@RestaurantReservation.Time=7:30} at {@RestaurantReservation.Time=7} for {@RestaurantReservation.NumberPeople=6} at {@RestaurantReservation.PlaceName=townsend}
+- yes, make the reservation for {@RestaurantReservation.Time=tomorrow} at {@RestaurantReservation.Cuisine=french} restaurant for {@RestaurantReservation.NumberPeople=4}
+- yes, reserve then confirm it
+- you can mark this reservation as a yes for {@RestaurantReservation.PlaceName=tribeca grill} {@RestaurantReservation.Time=tonight}
+
+
+> !# @intent.inherits = name : RestaurantReservation.DeleteReservation; domain_name : RestaurantReservation; model_name : DeleteReservation
+
+# RestaurantReservation.DeleteReservation
+- abandon the {@RestaurantReservation.Cuisine=mexican} restaurant reservation
+- abort a table for {@RestaurantReservation.NumberPeople=4} at {@RestaurantReservation.PlaceName=chez billy sud} at {@RestaurantReservation.Time=six} {@RestaurantReservation.Time=tonight}
+- abort the {@RestaurantReservation.Time=10am} 's reservation
+- {@RestaurantReservation.PlaceName=alice reataurant} dinner is off, cancel it
+- call and cancel my reservation at {@RestaurantReservation.PlaceName=gourmet burger kitchen} for {@RestaurantReservation.NumberPeople=three} {@RestaurantReservation.Time=tonight} at {@RestaurantReservation.Time=ten to nine}
+- call off my lunch reservation
+- cancel {@RestaurantReservation.Time=12 a.m.} reservation in {@RestaurantReservation.Address=seattle}
+- cancel {@RestaurantReservation.Time=7 o'clock} 's reservation at {@RestaurantReservation.PlaceName=l'entrecôte}
+- cancel {@RestaurantReservation.Time=7:00 p. m.} {@RestaurantReservation.PlaceName=asiate} restaurant reservation for {@RestaurantReservation.Time=tomorrow}'s dinner
+- cancel a table for {@RestaurantReservation.NumberPeople=eight} at {@RestaurantReservation.PlaceName=peter luger steak house} at {@RestaurantReservation.Time=7:30} {@RestaurantReservation.Time=tonight} in {@RestaurantReservation.Address=palo alto}
+- cancel all dinner reservations
+- cancel breakfast at {@RestaurantReservation.PlaceName=bridge cafe} 's
+- cancel {@RestaurantReservation.PlaceName=kfc}'s supper
+- cancel lunch for {@RestaurantReservation.NumberPeople=three}
+- cancel my reservation for {@RestaurantReservation.Time=6:30}
+- cancel my reservation for {@RestaurantReservation.NumberPeople=six} at {@RestaurantReservation.PlaceName=kfc} at {@RestaurantReservation.Time=seven thirty}
+- cancel reservation
+- cancel the reservation at {@RestaurantReservation.PlaceName=aubergine} immediately
+- cancel the reservation for {@RestaurantReservation.Time=7} {@RestaurantReservation.Time=tonight}
+- cancel the reservation for {@RestaurantReservation.PlaceName=candle cafe}
+- cancel the reservation for {@RestaurantReservation.NumberPeople=eight} at {@RestaurantReservation.PlaceName=wong's king} 's restaurant at {@RestaurantReservation.Time=twenty-five to eleven p.m}
+- cancel the reservation in nice {@RestaurantReservation.Rating=5-star} restaurant
+- cancel the {@RestaurantReservation.PlaceName=sylvia's restaurant of harlem} reservation for {@RestaurantReservation.Time=tonight}
+- cancel the table at {@RestaurantReservation.Time=5pm} in {@RestaurantReservation.PlaceName=dicos}'s restaurant
+- delete {@RestaurantReservation.Time=7:00 p.m.} reservation {@RestaurantReservation.Time=tonight} at {@RestaurantReservation.PlaceName=townsend} 's
+- delete {@RestaurantReservation.PlaceName=kedai makan} lunch reservation now
+- delete my reservation for {@RestaurantReservation.NumberPeople=ten} at {@RestaurantReservation.PlaceName=shiro’s}
+- delete that {@RestaurantReservation.Time=7pm} breakfast reservation we made on {@RestaurantReservation.Address=wukang road}
+- delete that {@RestaurantReservation.PlaceName=sane lam moon} reservation for {@RestaurantReservation.NumberPeople=5} that was {@RestaurantReservation.Time=six ten}
+- delete the {@RestaurantReservation.Time=14:20} reservation in {@RestaurantReservation.Address=bellevue}
+- delete the {@RestaurantReservation.PlaceName=cranks} reservation.
+- delete the homely restaurant reservation
+- delete the plans for {@RestaurantReservation.PlaceName=ba bar} at {@RestaurantReservation.Time=seven}
+- delete the reservation
+- delete the reservation for {@RestaurantReservation.PlaceName=the japan house.bar} {@RestaurantReservation.Time=tonight}
+- delete the table for {@RestaurantReservation.NumberPeople=two} at {@RestaurantReservation.PlaceName=tsui wah restaurant} at {@RestaurantReservation.Time=a quarter to nine} {@RestaurantReservation.Time=tonight}
+- do i have time to cancel the reservation at {@RestaurantReservation.PlaceName=le vallauris} for {@RestaurantReservation.Time=tonight}
+- drop {@RestaurantReservation.Time=7:00 p.m.} reservation at {@RestaurantReservation.PlaceName=ruth's chris steak house} 's
+- end reservation request at {@RestaurantReservation.PlaceName=lombardi's pizza} {@RestaurantReservation.Time=7 o'clock} at {@RestaurantReservation.Address=piccadilly}
+- end the reservation {@RestaurantReservation.Time=plan} {@RestaurantReservation.Time=tonight}
+- get rid of that reservation i made immediately.
+- have the manager at {@RestaurantReservation.PlaceName=masa} remove the reservation set for {@RestaurantReservation.Time=7:00pm}
+- have the reservation of {@RestaurantReservation.PlaceName=zucca} removed
+- help me delete the reservation for {@RestaurantReservation.Time=twenty-five to eleven} {@RestaurantReservation.Time=tonight}
+- i can not go to the reservation because i have no time, so delete it
+- i do not need the reservation any more
+- i don't need a table at {@RestaurantReservation.PlaceName=kuo yuan}
+- i don't need the reservation for {@RestaurantReservation.NumberPeople=two} people {@RestaurantReservation.Time=tonight}
+- i don't need the reservation, delete it
+- i have changed my plan so i have to delete the reservation
+- i have to cancel my reservation at {@RestaurantReservation.PlaceName=the chicago pizza pie factory} for {@RestaurantReservation.Time=tonight}
+- i made a reservation for {@RestaurantReservation.NumberPeople=5} at {@RestaurantReservation.PlaceName=chef's table at brooklyn fare} and now cancel it.
+- i will busy at 4pm so cancel the reservation
+- i've got to cancel my table for {@RestaurantReservation.Time=tonight} at the popular restaurant {@RestaurantReservation.PlaceName=nandos}
+- {@RestaurantReservation.PlaceName=kfc} lunch is off, cancel it
+- kill the {@RestaurantReservation.PlaceName=zuma} reservation {@RestaurantReservation.Time=tomorrow} at {@RestaurantReservation.Time=nine o'clock p.m.}
+- kindly cancel the table reserved for {@RestaurantReservation.NumberPeople=7} at {@RestaurantReservation.PlaceName=gaddi's} at {@RestaurantReservation.Time=seven} {@RestaurantReservation.Time=tonight}
+- make a reservation for {@RestaurantReservation.NumberPeople=four} people {@RestaurantReservation.Time=three forty-five} at {@RestaurantReservation.PlaceName=mo gridder's}
+- make sure to stop that reservation
+- make sure you have deleted the reservation
+- please call off the {@RestaurantReservation.Time=9 o'clock}'s reservation
+- please help me to delete the reservation and let me know if you finish
+- quash a table for {@RestaurantReservation.NumberPeople=6} at {@RestaurantReservation.PlaceName=marc forgione} at {@RestaurantReservation.Time=half past six pm} {@RestaurantReservation.Time=tonight}
+- quash {@RestaurantReservation.PlaceName=ippudo} for table of {@RestaurantReservation.NumberPeople=three} at {@RestaurantReservation.Time=7 o'clock} {@RestaurantReservation.Time=tonight}
+- quickly cancel the reservation that we've made at {@RestaurantReservation.PlaceName=kyiv restaurant} at {@RestaurantReservation.Time=7:30 pm} {@RestaurantReservation.Time=tonight}
+- remove my {@RestaurantReservation.PlaceName=fraunces tavern} plans for {@RestaurantReservation.NumberPeople=three}
+- remove the reservation at {@RestaurantReservation.PlaceName=kyiv restaurant} {@RestaurantReservation.Time=half past six}
+- remove the reservation because i have no time to go
+- remove the reservation for {@RestaurantReservation.NumberPeople=7} {@RestaurantReservation.Time=tonight}
+- remove the reservation for {@RestaurantReservation.Time=fifteen past nine} {@RestaurantReservation.Time=tonight}
+- remove {@RestaurantReservation.PlaceName=veniero's} restaurant reservation
+- rescind a table for {@RestaurantReservation.NumberPeople=two} at {@RestaurantReservation.PlaceName=zuma} {@RestaurantReservation.Time=tonight} at {@RestaurantReservation.Time=a quarter past nine p.m.}
+- rescind {@RestaurantReservation.PlaceName=grodzinski bakery} reservation for a table of {@RestaurantReservation.NumberPeople=7} {@RestaurantReservation.Time=tonight} at {@RestaurantReservation.Time=seven o'clock}
+- rescind reservations for a table of {@RestaurantReservation.NumberPeople=4} at {@RestaurantReservation.PlaceName=le bernardin} at {@RestaurantReservation.Time=a quarter to nine} {@RestaurantReservation.Time=tonight}
+- reservation at {@RestaurantReservation.PlaceName=54 below} at {@RestaurantReservation.Time=twenty past nine} {@RestaurantReservation.Time=tonight} for {@RestaurantReservation.NumberPeople=2} people
+- send an email cancelling my reservation for {@RestaurantReservation.NumberPeople=4} at {@RestaurantReservation.PlaceName=amber} 's {@RestaurantReservation.Time=today} at {@RestaurantReservation.Time=half past seven pm}
+- sorry delete the reservation i have made
+- sorry i have to delete the reservation and i will order it {@RestaurantReservation.Time=next time}
+- sorry that reservation at {@RestaurantReservation.Time=7:00 p.m.} needs to be deleted
+- take away the reservation for {@RestaurantReservation.PlaceName=kennedy fried chicken} at {@RestaurantReservation.Time=seven}
+- terminate the table reservation i have for {@RestaurantReservation.Time=tomorrow night}
+- the delicious restaurant reservation for {@RestaurantReservation.Time=half past six} needs to be cancelled.
+- the reservation for {@RestaurantReservation.PlaceName=veraci pizza} is no longer need. delete it.
+- the reservation needs to be cancelled
+- we can not make this dinner, cancel it now
+- we can't go to have lunch now, cancel it
+- we can't make the lunch now, delete it.
+- we cant't make this dinner now, please cancel it
+- wipe out {@RestaurantReservation.Time=8:00 p.m} 's reservation at {@RestaurantReservation.PlaceName=hawker centre}
+- would you cancel {@RestaurantReservation.Time=tomorrow}'s reservation at {@RestaurantReservation.Time=ten past nine}
+- would you mind deleting the reservation for {@RestaurantReservation.PlaceName=bar italia} {@RestaurantReservation.Time=a quarter past seven}
+- yank my table reservation for {@RestaurantReservation.NumberPeople=3} at {@RestaurantReservation.PlaceName=second avenue deli}
+- you can cancel {@RestaurantReservation.PlaceName=fenglin-joy} dinner
+- ^[can] cancel {@RestaurantReservation.PlaceName} {RestaurantReservation.MealType}^
+- ^(abort|quash|abandon)[{@RestaurantReservation.MealType}] [by {RestaurantReservation.PlaceName}] reservation[s] for {RestaurantReservation.Time} [{RestaurantReservation.Time}]
+
+
+> !# @intent.inherits = name : RestaurantReservation.FindReservationEntry; domain_name : RestaurantReservation; model_name : FindReservationEntry
+
+# RestaurantReservation.FindReservationEntry
+- all of the lunch reservation info at {@RestaurantReservation.Time=half past eleven}
+- any active reservation information that i may have.
+- call and check on my reservation for {@RestaurantReservation.NumberPeople=six} at {@RestaurantReservation.PlaceName=pommes frites} restaurant
+- can i see the details about the lunch reservation
+- can you show the reservation {@RestaurantReservation.Time=tomorrow}
+- can you tell me the detail of the reservation
+- check and see if my reservation at {@RestaurantReservation.PlaceName=sylvia's restaurant of harlem} is for {@RestaurantReservation.Time=7} {@RestaurantReservation.Time=tonight}
+- check if booking at {@RestaurantReservation.PlaceName=kau kee restaurant} 's, {@RestaurantReservation.Time=7pm} {@RestaurantReservation.Time=tonight} was successfully done.
+- check on the {@RestaurantReservation.Time=7} reservation for {@RestaurantReservation.PlaceName=brasserie vacherin, sutton}
+- check the reservation for {@RestaurantReservation.Time=7:00 p.m.}
+- check to see if i have any reservations for {@RestaurantReservation.Time=eight o'clock}
+- check to see if my reservation for {@RestaurantReservation.Time=7} {@RestaurantReservation.Time=tonight} is a {@RestaurantReservation.PlaceName=kennedy fried chicken}
+- check to see if my reservation was sent to my email for {@RestaurantReservation.Time=tonight} at {@RestaurantReservation.Time=7pm}
+- could you find the reservation {@RestaurantReservation.Time=tomorrow}
+- did i have a reservation {@RestaurantReservation.Time=tonight}
+- did i make a reservation at {@RestaurantReservation.PlaceName=veniero's} at {@RestaurantReservation.Time=five forty}
+- did i make a reservation for {@RestaurantReservation.Time=twenty-five to ten}
+- did i reserve a table {@RestaurantReservation.Time=next month}
+- did the {@RestaurantReservation.PlaceName=candle cafe} reservation at {@RestaurantReservation.Time=7:00 p.m.} {@RestaurantReservation.Time=tonight} go through
+- did you a table at {@RestaurantReservation.PlaceName=le gavroche} at {@RestaurantReservation.Time=seven p. m.} {@RestaurantReservation.Time=tonight}
+- did you book my table at {@RestaurantReservation.PlaceName=rolfe's chop house} {@RestaurantReservation.Time=6:00 p.m.}
+- did you make a {@RestaurantReservation.Time=seven p. m.} reservation at {@RestaurantReservation.PlaceName=munson diner}
+- did you make my {@RestaurantReservation.PlaceName=arethusa al tavolo} reservation {@RestaurantReservation.Time=eight o'clock}
+- did you make my {@RestaurantReservation.Time=half past eleven am} reservation
+- discover {@RestaurantReservation.PlaceName=market restaurant and bar} reservation for {@RestaurantReservation.Time=7:00 p.m.} {@RestaurantReservation.Time=tonight}
+- display details of my reservation for {@RestaurantReservation.PlaceName=sushi bar}
+- display {@RestaurantReservation.Time=tonight} 's reservation
+- do confirm if we have a booking at {@RestaurantReservation.Time=7pm} {@RestaurantReservation.Time=tonight} in {@RestaurantReservation.PlaceName=l'auberge chez francois}
+- do find if we have a reservation at {@RestaurantReservation.Time=7pm} {@RestaurantReservation.Time=tonight} in {@RestaurantReservation.PlaceName=market restaurant and bar}
+- do i have a {@RestaurantReservation.Time=7pm} reservation at {@RestaurantReservation.PlaceName=wapping hydraulic power station} {@RestaurantReservation.Time=tonight}
+- do i have a dinner reservation {@RestaurantReservation.Time=tomorrow} at {@RestaurantReservation.Time=17：45}
+- do i have a reservation at {@RestaurantReservation.PlaceName=salumeria rosi parmacotto} {@RestaurantReservation.Time=tonight}
+- do i have a reservation coming up
+- do i have a reservation {@RestaurantReservation.Time=tonight} at {@RestaurantReservation.Time=ten to seven pm}
+- do i have a {@RestaurantReservation.PlaceName=serendipity 3} dinner {@RestaurantReservation.Time=tonight}
+- do i have a table at {@RestaurantReservation.PlaceName=sushi yasuda} at {@RestaurantReservation.Time=seven p. m.}
+- do i have a table reserved at {@RestaurantReservation.PlaceName=jumbo kingdom} {@RestaurantReservation.Time=this evening}
+- do i have a table reserved for {@RestaurantReservation.Time=valentine's day}
+- do i have a table {@RestaurantReservation.Time=tomorrow} {@RestaurantReservation.Time=morning} at {@RestaurantReservation.PlaceName=piccolo cafe} for breakfast
+- do i have any reservations at {@RestaurantReservation.Time=noon}
+- do i have any reservations {@RestaurantReservation.Time=eight o'clock}
+- find {@RestaurantReservation.Time=7:00 p.m.} reservation for {@RestaurantReservation.PlaceName=korilla bbq} 's {@RestaurantReservation.Time=tonight}
+- find {@RestaurantReservation.Time=7:00} reservation for {@RestaurantReservation.Time=tonight}
+- find {@RestaurantReservation.PlaceName=caravaggio} reservation
+- find {@RestaurantReservation.PlaceName=dorrian's red hand restaurant} dining reservation
+- find my {@RestaurantReservation.Time=8pm}'s reservation
+- find my {@RestaurantReservation.Time=a quarter to nine} reservation
+- find my reservation at {@RestaurantReservation.PlaceName=renaissance san diego}
+- find my reservation for {@RestaurantReservation.Time=7pm} at {@RestaurantReservation.PlaceName=el gaucho}
+- find my reservation for {@RestaurantReservation.Time=tonight}
+- find my reservation i made for {@RestaurantReservation.PlaceName=1770 house} {@RestaurantReservation.Time=tonight} at {@RestaurantReservation.Time=7}
+- find my reservations for {@RestaurantReservation.Time=tonight}
+- find my restaurant reservation for {@RestaurantReservation.Time=8:00}
+- find reservations.
+- find the reservation at {@RestaurantReservation.PlaceName=kfc} for me
+- find {@RestaurantReservation.PlaceName=wing wah} 's reservation for {@RestaurantReservation.Time=tonight} at {@RestaurantReservation.Time=7:00 p.m.}
+- have my revervation for {@RestaurantReservation.PlaceName=kfc} brought forth
+- help me find my dinner reservations.
+- help me find my reservation for {@RestaurantReservation.PlaceName=l'entrecôte}
+- help me find my reservation for {@RestaurantReservation.Time=tonight} at {@RestaurantReservation.Time=7pm}
+- help me find my restaurant reservation for {@RestaurantReservation.Time=tonight}
+- help me find my {@RestaurantReservation.PlaceName=toscana} reservation
+- help me find the reservation at {@RestaurantReservation.PlaceName=aquagrill}
+- help me find the reservation for {@RestaurantReservation.Time=half past eight}
+- help me find the reservation for lunch
+- help me to find the reservation on {@RestaurantReservation.Time=sunday}
+- how long are you open?
+- i need you to display the reservation's details
+- i'd like to know if i reserved a table for {@RestaurantReservation.Time=valentine's} at {@RestaurantReservation.PlaceName=crystal jade}
+- if i have a reservation at {@RestaurantReservation.PlaceName=cipriani s.a.} for {@RestaurantReservation.Time=7} {@RestaurantReservation.Time=tonight}
+- if you made the reservation for me
+- is my {@RestaurantReservation.Time=half past six} reservation complete
+- is my reservation for {@RestaurantReservation.Time=tomorrow}'s dinner done
+- is the reservation at {@RestaurantReservation.PlaceName=bitterroot} completed
+- is the reservation for {@RestaurantReservation.Time=7:00} at {@RestaurantReservation.PlaceName=gourmet burger kitchen} done
+- kindly check if we have a booking at {@RestaurantReservation.Time=ten to nine} {@RestaurantReservation.Time=tonight} in {@RestaurantReservation.PlaceName=aberdeen angus steak houses}
+- kindly confirm if we already have done a reservation at {@RestaurantReservation.PlaceName=sushi house unico} {@RestaurantReservation.Time=fifteen to seven} {@RestaurantReservation.Time=tonight}
+- kindly see if we have a table reserved at {@RestaurantReservation.PlaceName=rainbow room} {@RestaurantReservation.Time=9:30 p.m.} {@RestaurantReservation.Time=tonight}
+- know if already have a reservation at {@RestaurantReservation.PlaceName=bridge cafe} at {@RestaurantReservation.Time=8} {@RestaurantReservation.Time=tonight}
+- know if we have a reservation at {@RestaurantReservation.Time=7pm} {@RestaurantReservation.Time=tonight} at {@RestaurantReservation.PlaceName=fairwood}
+- let me know if i had a time at {@RestaurantReservation.PlaceName=munson diner} {@RestaurantReservation.Time=tonight}
+- let me see the info for that reservation that i placed at {@RestaurantReservation.PlaceName=l'auberge chez francois}
+- my restaurant reservation
+- out if we have a table reserved at {@RestaurantReservation.PlaceName=corton} restaurant, {@RestaurantReservation.Time=7:00 p.m} {@RestaurantReservation.Time=tonight}
+- pull up reservation for {@RestaurantReservation.PlaceName=candlenut kitchen}
+- pull up reservations made {@RestaurantReservation.Time=today}
+- read my supper note for {@RestaurantReservation.Time=tonight}
+- reservation for {@RestaurantReservation.NumberPeople=9} at {@RestaurantReservation.Time=7pm}
+- reservations for {@RestaurantReservation.Time=7:00 p.m.} at {@RestaurantReservation.PlaceName=zuma}
+- reservations for {@RestaurantReservation.Time={@RestaurantReservation.NumberPeople=twenty} past two}
+- retrieve reservations for {@RestaurantReservation.PlaceName=chi spacca} 's {@RestaurantReservation.Time=6:30} at {@RestaurantReservation.Time=7:00 p.m.}
+- see if i have a table booked for {@RestaurantReservation.Time=6:30 p.m.} at 7 at {@RestaurantReservation.PlaceName=club gascon}
+- show all info about my reservation at {@RestaurantReservation.Time=five forty pm}
+- show me the reservation for {@RestaurantReservation.Time=today}
+- show my {@RestaurantReservation.PlaceName=jack’s place} reservation for {@RestaurantReservation.Time=7}
+- show my restaurant reservation for {@RestaurantReservation.Time=7 o'clock}
+- show the {@RestaurantReservation.PlaceName=marea} reservation for {@RestaurantReservation.Time=seven}
+- show the reservation for {@RestaurantReservation.NumberPeople=7} {@RestaurantReservation.Time=tonight}
+- the details of reservation for {@RestaurantReservation.Time=tomorrow}
+- the {@RestaurantReservation.Cuisine=french} restaurant i have plans for.
+- the {@RestaurantReservation.PlaceName=star seafood floating restaurant} reservation for {@RestaurantReservation.Time=a quarter to eight}
+- was there an reservation for {@RestaurantReservation.PlaceName=kai mayfair} at {@RestaurantReservation.Time=ten past six p.m.}
+- what is the detail of reservation on {@RestaurantReservation.Time=tomorrow}
+- what is the details of my reservation
+- what is the supper reservation for {@RestaurantReservation.Time=9 o'clock}
+- what reservation do i have {@RestaurantReservation.Time=tonight} for dinner
+- will i be eating at {@RestaurantReservation.PlaceName=korilla bbq} at {@RestaurantReservation.Time=seven p. m.}
+- [(can you tell me|i want to know|i need)] the detail of the reservation
+- [(help me [to]|can you|i need [you] to)] find [(my|the[dinner])] reservation [(on|for|at)] [{@RestaurantReservation.Time}]^
+- ^{@RestaurantReservation.PlaceName} reservation[s] [(at|in)] {RestaurantReservation.Address}
+- [can you] (show|display) [me] [(the|my)] [{@RestaurantReservation.PlaceName}] reservation [(for|at) {RestaurantReservation.Time}]
+
+
+> !# @intent.inherits = name : RestaurantReservation.FindReservationWhen; domain_name : RestaurantReservation; model_name : FindReservationWhen
+
+# RestaurantReservation.FindReservationWhen
+- can you tell me the time of the party in {@RestaurantReservation.PlaceName=nanjing restaurant}
+- check reservation time for {@RestaurantReservation.PlaceName=brasserie julien} {@RestaurantReservation.Time=tomorrow}
+- check reservation time for {@RestaurantReservation.PlaceName=hawker centre}
+- confirm the time of the {@RestaurantReservation.Time=chinese} restaurant reservation {@RestaurantReservation.Time=tomorrow night}
+- display the time details of the reservation for {@RestaurantReservation.PlaceName=sage thai} resturant in {@RestaurantReservation.Address=china town}
+- email me the time of the reservations to {@RestaurantReservation.PlaceName=vetri cucina} in {@RestaurantReservation.Address=palo alto}
+- help me with the time for the reservation at {@RestaurantReservation.PlaceName=halls chophouse}
+- help me with the time of the reservation at {@RestaurantReservation.PlaceName=beacon hill}
+- i hope you can tell me the time of the reservation in the {@RestaurantReservation.PlaceName=shanghai restaurant}
+- i need the time for the reservation at {@RestaurantReservation.PlaceName=the nosh bar}
+- i need you to tell me the time of reservation at {@RestaurantReservation.PlaceName=zhangliang reataurant}
+- i want to know if the reservation time is {@RestaurantReservation.Time=9pm}
+- i want to know the time of lunch
+- i want to know the time of {@RestaurantReservation.Time=tonight} reservation
+- provide me the time of the reservation at {@RestaurantReservation.PlaceName=chef's table at brooklyn fare}
+- read to me the time of the reservations to {@RestaurantReservation.PlaceName=l'auberge chez francois}
+- reservation time for {@RestaurantReservation.PlaceName=sage thai}
+- show reservation time for {@RestaurantReservation.PlaceName=genki sushi}
+- show {@RestaurantReservation.PlaceName=sushi yasuda} reservation
+- show time of {@RestaurantReservation.PlaceName=true food kitchen} reservation
+- tell what time i made a reservation for {@RestaurantReservation.Time=9 o'clock}
+- the time for the reservation {@RestaurantReservation.Time=9 o'clock}
+- the time for the reservation {@RestaurantReservation.Time=next friday}
+- the time of my reservation {@RestaurantReservation.PlaceName=market restaurant and bar}
+- the time of reservation {@RestaurantReservation.Time=tomorrow} at {@RestaurantReservation.PlaceName=bloom's restaurant}
+- the time of the reservation at {@RestaurantReservation.PlaceName=asiate}
+- the time of the reservation {@RestaurantReservation.Time=tomorrow night}
+- the time of the reservations to {@RestaurantReservation.PlaceName=le bernardin}
+- time of {@RestaurantReservation.PlaceName=murray's sturgeon shop} reservation
+- time of the {@RestaurantReservation.Cuisine=italian} restaurant reservation
+- what is the time of my reservation at {@RestaurantReservation.PlaceName=jean georges}, the {@RestaurantReservation.Cuisine=french} cuisine restaurant
+- what is the time of the reservation at {@RestaurantReservation.PlaceName=albannach}
+- what time is dinner at {@RestaurantReservation.PlaceName=zuma} 's?
+- what time is dinner {@RestaurantReservation.Time=tomorrow}
+- what time is my reservation {@RestaurantReservation.Time=7:30 pm}
+- what time is reservation for {@RestaurantReservation.PlaceName=kuo yuan}, the {@RestaurantReservation.Cuisine=noodle} restaurant
+- when is the reservation at {@RestaurantReservation.PlaceName=hi bar}
+- when is the reservation {@RestaurantReservation.Time=tonight}
+- when is the time for my reservation
+- when should i go to the booked restaurant
+- when should i go to the reservation
+- when should we go to the reserved restaurant
+- when should we go to {@RestaurantReservation.PlaceName=zucca} where i reserved a table for {@RestaurantReservation.NumberPeople=four}
+- when will the reservation start
+
+
+> !# @intent.inherits = name : RestaurantReservation.FindReservationWhere; domain_name : RestaurantReservation; model_name : FindReservationWhere
+
+# RestaurantReservation.FindReservationWhere
+- can you tell me the location of the reservation
+- could you tell me the direction of reservation
+- directions to {@RestaurantReservation.PlaceName=shopsins}
+- display location of {@RestaurantReservation.PlaceName=shopsins}
+- display the address of the reservation
+- display the {@RestaurantReservation.PlaceName=dicos}'s address on map
+- display the route to it
+- driving directions for {@RestaurantReservation.PlaceName=vetri cucina}
+- find {@RestaurantReservation.PlaceName=atera} restaurant in {@RestaurantReservation.Address=los angeles}
+- for now i just know how to get the restaurant name is {@RestaurantReservation.PlaceName=wuxi restaurant}
+- gps {@RestaurantReservation.PlaceName=sage thai} restaurant
+- help me with the location of {@RestaurantReservation.PlaceName=gourmet burger kitchen}
+- how far is {@RestaurantReservation.PlaceName=fraunces tavern} located from me
+- i can't locate {@RestaurantReservation.PlaceName=alice restaurant} help me
+- i need the directions of the {@RestaurantReservation.PlaceName=metoo restaurant}
+- i need the directions to {@RestaurantReservation.PlaceName=veeraswamy}
+- i need to go to the restaurant on {@RestaurantReservation.Address=1575 garden} of the {@RestaurantReservation.Address=gods road} to join in the reservation
+- i need to know the location of the reservation
+- i need you to located the reservation
+- i want to know the reservation location
+- i will go to the restaurant on {@RestaurantReservation.Address=nanjing road} {@RestaurantReservation.Time=tomorrow} {@RestaurantReservation.Time=morning}
+- is {@RestaurantReservation.PlaceName=rules} close by me
+- locate the restaurant
+- location of {@RestaurantReservation.PlaceName=the chicago pizza pie factory} restaurant
+- location of {@RestaurantReservation.PlaceName=veniero's}
+- please tell me the location of the reservation
+- provide me the direction to the booked {@RestaurantReservation.Cuisine=chinese} restaurant
+- provide the route to {@RestaurantReservation.PlaceName=bob bob ricard}
+- reservation location
+- show {@RestaurantReservation.PlaceName=gotham bar and grill} location
+- show {@RestaurantReservation.PlaceName=lala bar} on the map
+- show me the address for reservation
+- show me the direction how to get to the place
+- show reservation location
+- show {@RestaurantReservation.PlaceName=sage thai} reasturant location
+- show the locale of my reservation for {@RestaurantReservation.PlaceName=zucca}
+- show {@RestaurantReservation.PlaceName=zucca} restaurant on map
+- the location of reservation at {@RestaurantReservation.Time=6pm}
+- the lunch reservation's location
+- the restaurant is on {@RestaurantReservation.Address=1959 auto center dr}.
+- what is the location of the reserved restaurant
+- where am i going {@RestaurantReservation.Time=tomorrow}
+- where {@RestaurantReservation.PlaceName=chico madrid} is located
+- where is {@RestaurantReservation.PlaceName=cranks} located
+- where is my reservation place
+- where is my reservation {@RestaurantReservation.Time=tomorrow}
+- where is the {@RestaurantReservation.Cuisine=noodle} restaurant i'm going to {@RestaurantReservation.Time=6:30}
+- where is the place of my reservation
+- where is the reservation of {@RestaurantReservation.Time=next week}
+- where is the {@RestaurantReservation.Cuisine=sushi} restaurant where i have reservations?
+- (show|display|search) {@RestaurantReservation.PlaceName}['s] restaurant on [the] map
+
+
+> !# @intent.inherits = name : RestaurantReservation.Reject; domain_name : RestaurantReservation; model_name : Reject
+
+# RestaurantReservation.Reject
+- change of plans no. no,
+- do not book
+- do not book it
+- do not change it
+- do not change the reservation
+- do not reserve the restaurant
+- do not reserve this
+- don't book it, forget it.
+- don't book this {@RestaurantReservation.PlaceName=paseo} reservation, sorry
+- dont book
+- dont reserve
+- dont reserve that
+- hold off on finalizing the {@RestaurantReservation.Time=7 o'clock} {@RestaurantReservation.PlaceName=the woodsman tavern} table for {@RestaurantReservation.NumberPeople=eight}
+- hold on, i've changed my mind
+- i don't think this will work for me so stop the {@RestaurantReservation.NumberPeople=two} person {@RestaurantReservation.PlaceName=el gaucho} table.
+- i don’t have time so forget about the {@RestaurantReservation.PlaceName=kfc} reservation
+- i will call delicious {@RestaurantReservation.PlaceName=rilla} later if book this reservation
+- i will not take part in the parting this afternoon in {@RestaurantReservation.PlaceName=jucie's restaurant} because i have no time
+- i won't finish my work so forget the reservation
+- i've changed my mind. don't reserve that {@RestaurantReservation.Cuisine=steak} house.
+- just don't worry about booking the {@RestaurantReservation.Time=a quarter to nine p.m.} reservation at {@RestaurantReservation.PlaceName=ba bar} for now.
+- let's just stop this whole process and close out the reservation for {@RestaurantReservation.NumberPeople=eight} at {@RestaurantReservation.PlaceName=1770 house}
+- nevermind booking
+- no cancel reservation for the dinner
+- no cancel the lunch reservation
+- no cancel the lunch reservation process
+- no don't change the booking
+- no dont book the supper
+- no just book it
+- no to the reservations.
+- no, cancel the lunch reservation
+- no, do not reserve
+- no, i don't need to book the restaurant
+- no,will call you if we want to make a reservation later
+- reject it
+- reject the {@RestaurantReservation.Cuisine=chinese} restaurant reservation
+- reject the {@RestaurantReservation.Cuisine=italian} restaurant reservation
+- reject the process
+- skip this reservation
+- stop and cancel
+- stop and cancel this dinner reservation
+- stop booking the {@RestaurantReservation.Cuisine=french} restaurant
+- stop please, cancel the reservation
+- stop, can you cancel lunch reservation
+- stop, i don't need it
+- stop,i will call the restaurant if want to book later
+- wait, cancel it
+- we may call you later
+- stop [and cancel] [(this|the)] [{@RestaurantReservation.MealType}] reservation [at {RestaurantReservation.Address}]
+
+
+> !# @intent.inherits = name : RestaurantReservation.Reserve; domain_name : RestaurantReservation; model_name : Reserve
+
+# RestaurantReservation.Reserve
+- {@RestaurantReservation.Rating=5-star} casual {@RestaurantReservation.Address=nearby} restaurant for {@RestaurantReservation.NumberPeople=4} people reservation
+- {@RestaurantReservation.NumberPeople=7} people for that {@RestaurantReservation.Cuisine=japanese} {@RestaurantReservation.Cuisine=sushi} restaurant
+- book a {@RestaurantReservation.Cuisine=chinese} restaurant
+- book a reservation at {@RestaurantReservation.Time=noon} with {@RestaurantReservation.NumberPeople=4} people in {@RestaurantReservation.PlaceName=sushi bar}
+- book a restaurant with {@RestaurantReservation.Cuisine=ramen}
+- book a table at {@RestaurantReservation.PlaceName=sushi of gari} on {@RestaurantReservation.Address=79th ave}
+- book a table for {@RestaurantReservation.NumberPeople=4} people {@RestaurantReservation.Time=tomorrow} at {@RestaurantReservation.Time=7:30} in downtown
+- book a table for {@RestaurantReservation.NumberPeople=6} at {@RestaurantReservation.PlaceName=long beach seafood restaurant} in {@RestaurantReservation.Address=seattle}
+- book a table for {@RestaurantReservation.NumberPeople=ten} at a delicious restaurant in {@RestaurantReservation.Address=downtown kitchener}
+- book a table for {@RestaurantReservation.NumberPeople=ten} at a nice {@RestaurantReservation.Cuisine=italian} restaurant in {@RestaurantReservation.Address=san francisco}
+- book a table for {@RestaurantReservation.NumberPeople=two} for a {@RestaurantReservation.Cuisine=chinese} restaurant in {@RestaurantReservation.Address=los angeles}
+- book me a table at {@RestaurantReservation.PlaceName=australia dairy company} that is good for groups
+- book me a table at the {@RestaurantReservation.PlaceName=lartusi}
+- book me a table for {@RestaurantReservation.NumberPeople=six} of a {@RestaurantReservation.Cuisine=mexican} restaurant in {@RestaurantReservation.Address=san francisco}
+- book me a table for {@RestaurantReservation.Address=walnut kemrey park} for a {@RestaurantReservation.Rating=5-star} place
+- book me an {@RestaurantReservation.Cuisine=indian} restaurant for {@RestaurantReservation.Time=tomorrow night}
+- book reservations for a {@RestaurantReservation.Address=closest} {@RestaurantReservation.Cuisine=colombian} restaurant with romantic atmosphese
+- call {@RestaurantReservation.PlaceName=metropolitan museum of art roof garden} and make a reservation
+- call {@RestaurantReservation.PlaceName=st. john} to make reservations
+- can i book a table at a {@RestaurantReservation.Rating=4 stars} restaurant
+- can i book a table at a {@RestaurantReservation.Rating=4-star} inexpensive restaurant
+- can you help me to order a {@RestaurantReservation.Rating=5-star} restaurant {@RestaurantReservation.Time=next week}
+- can you help me to order a table in a {@RestaurantReservation.Cuisine=chinese} restaurant at {@RestaurantReservation.Address=redmond}
+- can you reserve a {@RestaurantReservation.Cuisine=sushi} bar for me
+- can you tell me how to reserve the restaurant on {@RestaurantReservation.Address=2200 mission college blvd}
+- could you help me reserve a {@RestaurantReservation.Rating=5-star} restaurant room
+- help me to reserve a table at restaurant above {@RestaurantReservation.Rating=4 stars}
+- i ask yang to help me reserve a {@RestaurantReservation.Rating=5-star} restaurant {@RestaurantReservation.Time=next month}
+- i hope you can reserve a restaurant at {@RestaurantReservation.Address={@RestaurantReservation.PlaceName=collage street}}
+- i just wanted to reserve a table for a chinese {@RestaurantReservation.Rating=4-star} restaurant
+- i ll have to book a table
+- i need a reservation for {@RestaurantReservation.PlaceName=star seafood floating restaurant}
+- i need a table for {@RestaurantReservation.NumberPeople=seven} at {@RestaurantReservation.PlaceName=tom aikens} in {@RestaurantReservation.Address=shanghai}
+- i need a table for today's dinner
+- i need reservations at {@RestaurantReservation.PlaceName=zucca}
+- i need to book a table {@RestaurantReservation.Time=tomorrow} at {@RestaurantReservation.Address=downtown}
+- i need to go to a restaurant name zhongshan restaurant in {@RestaurantReservation.Address=city center} to do a reserve
+- i need to order a {@RestaurantReservation.Rating=4-star} restaurant
+- i need to order a table in {@RestaurantReservation.Rating=5 star} restaurant
+- i need to reserve the restaurant
+- i need to reserve the restaurant named {@RestaurantReservation.PlaceName=guangzhou restaurant}
+- i need to reserve the restaurant on {@RestaurantReservation.Address=189 e pine st}
+- i need you help to reserve a table at {@RestaurantReservation.Rating=4-star} restaurant
+- i reserve the restaurant is on {@RestaurantReservation.Address=137 w san bernardino rd}
+- i want a {@RestaurantReservation.Rating=4star} restaurant for {@RestaurantReservation.Time=tomorrow} lunch
+- i want reserve a {@RestaurantReservation.Rating=3-star} restaurant for {@RestaurantReservation.NumberPeople=four} people for lunch
+- i want to order a table at {@RestaurantReservation.Rating=5-star} restaurant
+- i want to reserve a {@RestaurantReservation.Rating=4-star} restaurant {@RestaurantReservation.Time=tomorrow}
+- i want to reserve a restaurant to eat {@RestaurantReservation.Cuisine=noodles}
+- i want to reserve this restaurant
+- i will book a table for this dinner
+- i will reserve the restaurant is on {@RestaurantReservation.Address=nanjing road}
+- i would like reservations at {@RestaurantReservation.PlaceName=koi} in {@RestaurantReservation.Address=central street}
+- make a reservation at a restaurant {@RestaurantReservation.Address=nearby}
+- make a reservation at {@RestaurantReservation.Cuisine=a sushi} restaurant
+- make a reservation at casual reataurant
+- make a reservation at the {@RestaurantReservation.Address=closest} {@RestaurantReservation.PlaceName=the original soup man}
+- make a reservation at the {@RestaurantReservation.Cuisine=japanese} restaurant
+- make a reservation for {@RestaurantReservation.NumberPeople=5} at {@RestaurantReservation.Time=8pm} {@RestaurantReservation.Time=tonight}
+- make a reservation for {@RestaurantReservation.NumberPeople=7} at {@RestaurantReservation.PlaceName=china grill management}
+- make a reservation for about {@RestaurantReservation.NumberPeople=5} people at {@RestaurantReservation.Rating=5-star} restaurant
+- make a reservation for {@RestaurantReservation.PlaceName=lawry's}
+- make a reservation for me at {@RestaurantReservation.PlaceName=star seafood floating restaurant}
+- make a reservation for {@RestaurantReservation.Cuisine=steak} {@RestaurantReservation.Time=eight o'clock}
+- make a reservation for {@RestaurantReservation.NumberPeople=two} at {@RestaurantReservation.Time=nine thirty p m} at {@RestaurantReservation.PlaceName=gaddi's}
+- make a restaurant reservation in {@RestaurantReservation.Address=college street} that is good for groups
+- make for {@RestaurantReservation.PlaceName=seafood&fruit restaurant&bar} reservation
+- make me a reservation at a casual restaurant in {@RestaurantReservation.Address=beijing}
+- make me a reservation at {@RestaurantReservation.PlaceName=korilla bbq}
+- make reservation at {@RestaurantReservation.Time=8}
+- make reservation at {@RestaurantReservation.PlaceName=corton} for {@RestaurantReservation.Time=next month}
+- make reservation at {@RestaurantReservation.PlaceName=gourmet burger kitchen} for dinner {@RestaurantReservation.Time=9 o'clock}
+- make reservation at {@RestaurantReservation.PlaceName=st. john} for breakfast
+- make reservation at {@RestaurantReservation.PlaceName=the cube}, the {@RestaurantReservation.Rating=5-star} restaurant
+- make reservation for {@RestaurantReservation.NumberPeople=3}
+- make reservation for {@RestaurantReservation.NumberPeople=three} at a casual cafeteria in {@RestaurantReservation.Address=downtown}
+- make reservations at {@RestaurantReservation.PlaceName=mak's noodle} on {@RestaurantReservation.Address=manamunda}
+- make reservations at {@RestaurantReservation.PlaceName=rainbow room} in {@RestaurantReservation.Address=rowes bay queensland}
+- make reservations at the {@RestaurantReservation.PlaceName=la grenouille}
+- make reservations for {@RestaurantReservation.NumberPeople=6} on {@RestaurantReservation.Time=fri} at {@RestaurantReservation.Time=ten to five} at {@RestaurantReservation.PlaceName=harold black}
+- make reservations for {@RestaurantReservation.PlaceName=crystal jade} in {@RestaurantReservation.Address=18th avenue ne}
+- make reservations for {@RestaurantReservation.NumberPeople=two} at {@RestaurantReservation.PlaceName=genki sushi}
+- make reservations to {@RestaurantReservation.PlaceName=benihana}
+- make reservations to {@RestaurantReservation.PlaceName=jack’s place} for supper
+- make the reservation at {@RestaurantReservation.Address={@RestaurantReservation.PlaceName=collage street}}
+- reserve a nice meal in {@RestaurantReservation.Address=no.1 street} for dinner for {@RestaurantReservation.NumberPeople=7} person {@RestaurantReservation.Time=tomorrow} at {@RestaurantReservation.Time=eleven ten a. m.}
+- reserve a nice place for {@RestaurantReservation.Cuisine=tacos}
+- reserve a seat for {@RestaurantReservation.NumberPeople=four} people at {@RestaurantReservation.PlaceName=albannach}
+- reserve a spot at {@RestaurantReservation.PlaceName=marc forgione}
+- reserve a table at {@RestaurantReservation.PlaceName=arethusa al tavolo} at {@RestaurantReservation.Time=half past five p m}
+- reserve a table at {@RestaurantReservation.PlaceName=australia dairy company}
+- reserve a table for {@RestaurantReservation.NumberPeople=5} at {@RestaurantReservation.PlaceName=zaro's bakery} at {@RestaurantReservation.Time=ten to seven} {@RestaurantReservation.Time=tonight}
+- reserve a table for me
+- reserve a table for me in a restaurant that serves {@RestaurantReservation.Cuisine=japanese} cuisine
+- reserve {@RestaurantReservation.PlaceName=bickford}'s supper
+- reserve me a place at {@RestaurantReservation.PlaceName=the chicago pizza pie factory}
+- reserve me a table at {@RestaurantReservation.PlaceName=grodzinski bakery}
+- reserve table for {@RestaurantReservation.NumberPeople=five} at {@RestaurantReservation.PlaceName=kedai makan}
+- reserve the supper by {@RestaurantReservation.PlaceName=hard rock cafe} on {@RestaurantReservation.Time=4 p.m.}
+- reserve the table at {@RestaurantReservation.Rating=5 stars} restaurant
+- reserve the table for {@RestaurantReservation.NumberPeople=6} people {@RestaurantReservation.Time=tomorrow}
+- reserve this {@RestaurantReservation.Cuisine=italian} restaurant please
+- reserve us a table for {@RestaurantReservation.NumberPeople=6} at {@RestaurantReservation.PlaceName=wong's king} at {@RestaurantReservation.Time=eight o'clock}
+- would you like to make a reservation at an outdoor romantic place
+- reserve [a] table[s] for {@RestaurantReservation.NumberPeople} (at|in) {RestaurantReservation.PlaceName}
+
+
+> # Entity definitions
+
+> !# @entity.inherits = name : RestaurantReservation.Address; domain_name : RestaurantReservation; model_name : Address
+
+@ ml RestaurantReservation.Address
+
+> !# @entity.inherits = name : RestaurantReservation.Cuisine; domain_name : RestaurantReservation; model_name : Cuisine
+
+@ ml RestaurantReservation.Cuisine
+
+> !# @entity.inherits = name : RestaurantReservation.NumberPeople; domain_name : RestaurantReservation; model_name : NumberPeople
+
+@ ml RestaurantReservation.NumberPeople
+
+> !# @entity.inherits = name : RestaurantReservation.PlaceName; domain_name : RestaurantReservation; model_name : PlaceName
+
+@ ml RestaurantReservation.PlaceName
+
+> !# @entity.inherits = name : RestaurantReservation.Rating; domain_name : RestaurantReservation; model_name : Rating
+
+@ ml RestaurantReservation.Rating
+
+> !# @entity.inherits = name : RestaurantReservation.Time; domain_name : RestaurantReservation; model_name : Time
+
+@ ml RestaurantReservation.Time
+
+
+> # PREBUILT Entity definitions
+
+
+> # Phrase list definitions
+
+
+> # List entities
+
+@ list RestaurantReservation.Atmosphere = 
+	- balmy outdoor :
+	- casual :
+	- charming :
+	- cosy :
+	- decent :
+	- delicious :
+	- elegant :
+	- expensive :
+	- exquisite :
+	- friendly :
+	- homely :
+	- inexpensive :
+	- lovely :
+	- popular :
+	- romantic :
+	- traditional :
+	- wonderful :
+	- delightful :
+	- comfortable :
+	- nice :
+	- attractive :
+
+
+@ list RestaurantReservation.MealType = 
+	- breakfast :
+	- dinner :
+	- lunch :
+	- supper :
+
+
+> # RegEx entities
+
+

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "58ac6565-68bd-41c5-88e1-7d059ff438f2": {
+      "ProjectGuid": "58ac6565-68bd-41c5-88e1-7d059ff438f2",
+      "DisplayName": "AzureAI_AnalyzeImag",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -1,0 +1,10 @@
+C:\Users\MOHAMMED ZAYAN\source\repos\HandwritingDetection\HandwritingDetection\bin\Debug\HandwritingDetection.exe.config
+C:\Users\MOHAMMED ZAYAN\source\repos\HandwritingDetection\HandwritingDetection\bin\Debug\HandwritingDetection.exe
+C:\Users\MOHAMMED ZAYAN\source\repos\HandwritingDetection\HandwritingDetection\bin\Debug\HandwritingDetection.pdb
+C:\Users\MOHAMMED ZAYAN\source\repos\HandwritingDetection\HandwritingDetection\bin\Debug\Newtonsoft.Json.dll
+C:\Users\MOHAMMED ZAYAN\source\repos\HandwritingDetection\HandwritingDetection\bin\Debug\Newtonsoft.Json.xml
+C:\Users\MOHAMMED ZAYAN\source\repos\HandwritingDetection\HandwritingDetection\obj\Debug\HandwritingDetection.csproj.AssemblyReference.cache
+C:\Users\MOHAMMED ZAYAN\source\repos\HandwritingDetection\HandwritingDetection\obj\Debug\HandwritingDetection.csproj.CoreCompileInputs.cache
+C:\Users\MOHAMMED ZAYAN\source\repos\HandwritingDetection\HandwritingDetection\obj\Debug\HandwritingDetection.csproj.CopyComplete
+C:\Users\MOHAMMED ZAYAN\source\repos\HandwritingDetection\HandwritingDetection\obj\Debug\HandwritingDetection.exe
+C:\Users\MOHAMMED ZAYAN\source\repos\HandwritingDetection\HandwritingDetection\obj\Debug\HandwritingDetection.pdb

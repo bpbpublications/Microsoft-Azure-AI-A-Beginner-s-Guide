@@ -1,0 +1,28 @@
+{
+  "modelPath": "D:\\Sankara\\AzureAIBook\\orchestrator-bot\\model",
+  "snapshotPath": "D:\\Sankara\\AzureAIBook\\orchestrator-bot\\generated\\orchestrator.blu",
+  "dataSources": {
+    "hierarchical": true,
+    "inputs": [
+      {
+        "type": "luis",
+        "id": "e51f5d1b-3610-472c-8c3d-b9c88006ada0",
+        "version": "0.1",
+        "key": "cbff18a8e73c48fca0e22a03d9d2d45c",
+        "endpoint": "https://reservationapp-authoring.cognitiveservices.azure.com/",
+        "routingName": "l_reservation",
+        "filePath": "D:\\Sankara\\AzureAIBook\\orchestrator-bot"
+      },
+      {
+        "type": "qna",
+        "id": "37112c08-a6f6-4d53-9df6-258692e9d73f",
+        "version": "",
+        "key": "205f474cd7d746c6a722aec16d9ab1bc",
+        "endpoint": "",
+        "routingName": "q_mcdonaldsfaq",
+        "filePath": "D:\\Sankara\\AzureAIBook\\orchestrator-bot"
+      }
+    ],
+    "path": "D:\\Sankara\\AzureAIBook\\orchestrator-bot\\CognitiveModels"
+  }
+}
